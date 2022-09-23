@@ -8,21 +8,20 @@
 
 char *rot13(char *s)
 {
-	int a = 0;
+	int a, b;
+	char c[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char d[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (s[a] != '\0')
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		while ((s[a] >= 'a' && s[a] <= 'z') ||
-				(s[a] >= 'A' && s[a] <= 'Z'))
+		for (b = 0; c[b] != '\0'; b++)
 		{
-			if ((s[a] >= 'a' && s[a] <= 'm') ||
-					(s[a] >= 'A' && s[a] <= 'M'))
-				s[a] += 13;
-			else
-				s[a] -= 13;
-			a++;
+			if (s[a] == c[b])
+			{
+				s[a] = d[b];
+				break;
+			}
 		}
-		a++;
 	}
 	return (s);
 }
