@@ -20,7 +20,6 @@ int _sqrt_recursion(int n)
  * @b: counter
  * Return: the square root
  */
-
 int squareroot(int a, int b)
 {
 	if (b < 1)
