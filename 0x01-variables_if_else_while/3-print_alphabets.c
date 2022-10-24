@@ -8,14 +8,14 @@
 
 int main(void)
 {
-    int n;
+	int n;
 
-    for (n = 0; n < 26; ++n)
-    {
-        putchar('a' + c);
-        for (n = 0; n < 26; ++n)
-            putchar('A' + c);
-            putchar ('\n');
-        return (0);
-    }
-    
+	for (n = 0; n < 26; ++n)
+	{
+		putchar('a' + n);
+		for (n = 0; n < 26; ++n)
+			putchar('A' + n);
+			putchar ('\n');
+		return (0);
+	}
+}
