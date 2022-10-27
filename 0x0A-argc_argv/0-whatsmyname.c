@@ -3,8 +3,8 @@
 
 /**
  * main - a function that prints its name, followed by a new line
- * @argv: arguments
- * @argc: aargument count
+ * @argv: argument values
+ * @argc: aargument counter
  * Return: Always 0 (Success)
  */
 
