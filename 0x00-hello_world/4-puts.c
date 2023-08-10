@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - a function
- * return: 0 if success and exit
+/**
+ * main - prints exactly "Programming is like building
+ * a multilingual puzzle", followed by a new line
+ * Return: 0 (Success)
  */
 
 int main(void)
