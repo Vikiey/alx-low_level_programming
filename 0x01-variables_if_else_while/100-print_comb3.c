@@ -17,8 +17,10 @@ int main(void)
 			putchar(b + '0');
 
 			if (a < 8)
+			{
 				putchar(',');
 				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
