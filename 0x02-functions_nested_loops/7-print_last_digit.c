@@ -11,6 +11,6 @@ int print_last_digit(int i)
 {
 	int lst_digit = i % 10;
 
-	printf("%d\n", lst_digit);
+	printf("%d", lst_digit);
 	return (lst_digit);
 }
