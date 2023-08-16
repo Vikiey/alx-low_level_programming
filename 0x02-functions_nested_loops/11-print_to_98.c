@@ -6,6 +6,7 @@
  * @b: the number to start counting from
  * Return: 0 (success)
  */
+
 void print_to_98(int b)
 {
 	while (b < 98)
