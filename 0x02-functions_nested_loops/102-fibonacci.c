@@ -4,6 +4,7 @@
  * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
  * Return: 0
  */
+
 int main(void)
 {
 	long int i, j, k, n;
@@ -14,15 +15,13 @@ int main(void)
 	for (i = 1; i <= 50; ++i)
 	{
 		if (j != 20365011074)
-		{
 			printf("%ld, ", j);
-		} else
-		{
+		else
 			printf("%ld\n", j);
-		}
 		n = j + k;
 		j = k;
 		k = n;
 	}
 
 	return (0);
+}
