@@ -12,7 +12,7 @@ void print_array(int *a, int n)
 
 	j = n - 1;
 
-	for (i = 0; i <= j; i++)
+	for (i = 0; i < n; i++)
 	{
 		_putchar(a[i]);
 
