@@ -7,13 +7,13 @@
  */
 
 void rev_string(char *s)
-{;
-	int b = 0;
-	int c, d;
+{
+	int b, c, d;
 
 	for (c = 0; s[c] != 0; c++)
 	{
 	}
+	b = 0;
 	c = c - 1;
 	while (b < c)
 	{
