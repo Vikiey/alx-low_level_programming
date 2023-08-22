@@ -7,12 +7,11 @@
 
 void puts_half(char *str)
 {
-	int a;
+	int a, b;
 
 	for (a = 0; str[a] != 0; a++)
-	{
-	}
-	for (a /= 2; str[a] != 0; a++)
-		_putchar(str[a]);
+		;
+	for (b = (a + 1) / 2; b < a; a++)
+		_putchar(str[b]);
 	_putchar('\n');
 }
