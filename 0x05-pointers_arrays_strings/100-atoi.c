@@ -26,6 +26,11 @@ int _atoi(char *s)
 			b = b * 10 + (s[a] - '0');
 			a++;
 		}
+		else
+		{
+			b = b * 10 - (s[a] - '0');
+			a++;
+		}
 	}
 
 	sign *= -1;
