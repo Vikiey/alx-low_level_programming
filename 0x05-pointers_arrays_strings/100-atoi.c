@@ -19,6 +19,8 @@ int _atoi(char *s)
 		sign *= -1;
 		a++;
 	}
+	else if (s[a] == '+')
+		a++;
 	while (s[a] >= '0' && s[a] <= 9)
 	{
 		b = b * 10 + (s[a] - '0');
