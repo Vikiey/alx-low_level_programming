@@ -17,10 +17,8 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[p] = src[p];
 
 	/* if n > length of src add null byte to fipl dest string */
-	if (p < n)
-	{
+	for (; p < n; p++)
 		dest[p] = '\0';
-		p++;
-	}
+
 	return (dest);
 }
