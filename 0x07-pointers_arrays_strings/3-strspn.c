@@ -21,6 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[a] == accept[c])
 				b = 1;
 		}
+		c = 0;
 		if (b == 0)
 			break;
 		num++;
