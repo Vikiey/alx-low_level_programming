@@ -11,6 +11,7 @@
 
 int main(int argc, char *argv[])
 {
+	int a, cents;
 	int coins[] = {25, 10, 5, 2, 1};
 	int numbcoins = sizeof(coins) / sizeof(coins[0]);
 	int change = 0;
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int cents = atoi(argv[1]);
+	cents = atoi(argv[1]);
 
 	if (cents < 0)
 	{
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (int a = 0; a < numbcoins; a++)
+	for (a = 0; a < numbcoins; a++)
 	{
 		while (cents >= coins[a])
 		{
