@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int coins[] = {25, 10, 5, 2, 1};
 	int numbcoins = sizeof(coins) / sizeof(coins[0]);
-	int count = 0;
+	int change = 0;
 
 	if (argc != 2)
 	{
@@ -34,11 +34,11 @@ int main(int argc, char *argv[])
 		while (cents >= coins[a])
 		{
 			cents -= coins[a];
-			count++;
+			change++;
 		}
 	}
 
-	printf("%d\n", count);
+	printf("%d\n", change);
 
 	return (0);
 }
