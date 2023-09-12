@@ -1,12 +1,19 @@
 #ifndef DOG_H
 #define DOG_H
 
-typedef struct dog
+/**
+ * struct dog - structure declaration, dog is name of the structure
+ * @name: first member, type char pointer
+ * @age: second membet, type float
+ * @owner: third member, type char pointer
+ */
+
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} my_dog;
+};
 
 typedef my_dog dog_t;
 
