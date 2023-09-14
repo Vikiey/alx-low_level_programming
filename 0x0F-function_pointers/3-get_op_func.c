@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdio.h>
 
 /**
  * get_op_func - selects the correct function to perform
@@ -7,7 +8,7 @@
  * Return: pointer to the function that corresponds to the operator
  */
 
-int (*get_op_func(char *s))(int, int);
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -22,7 +23,7 @@ int (*get_op_func(char *s))(int, int);
 	{
 		if (ops[i].op[0] == s[0] && s[1] == '\0')
 			return (ops[i].f);
-		++d;
+		++i;
 	}
 	return (NULL);
 }
