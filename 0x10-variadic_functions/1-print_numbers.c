@@ -20,13 +20,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (a--)
 		printf("%d", va_arg(apv, int));
 
-	while (a-- > 0)
-	{
-		if (separator == NULL)
-			printf("%d", va_arg(apv, int));
-		else
-			printf("%s%d", separator, va_arg(apv, int));
-	}
+	while (a-- > 0 && separator != NULL)
+		printf("%s%d", separator, va_arg(apv, int));
+
 	printf("\n");
 
 	va_end(apv);
