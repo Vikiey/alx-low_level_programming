@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * op_sum - adds a and b
+ * op_add - adds a and b
  * @a: type int
  * @b: type int
  * Return: sum of a and b

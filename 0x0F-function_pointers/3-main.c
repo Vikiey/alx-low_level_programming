@@ -18,13 +18,20 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (1);
+		return (98);
 	}
 
+	func = get_op_func(argv[2]);
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	operator = argv[2][0];
+	operator = argv[2][0]; /* i.e operator = operator argument*/
+
+	if (!func)
+	{
+		printf("Error\n");
+		return (99);
+	}
 
 	if ((operator == '/' || operator == '%') && num2 == 0)
 	{
