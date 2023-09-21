@@ -2,7 +2,7 @@
 
 /**
  * print_list - prints all the elements of a list_t list
- * @: pointer to linked list
+ * @h: pointer to linked list
  * Return: the number of nodes else if NULL print [0] (nil)
  */
 
@@ -13,7 +13,6 @@ size_t print_list(const list_t *h)
 	if (h == NULL)
 	{
 		printf("[0] (nil)\n");
-		return (0);
 	}
 
 	while (h != NULL)
