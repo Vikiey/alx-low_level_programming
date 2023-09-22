@@ -13,6 +13,7 @@ void free_list(list_t *head)
 	{
 		d = head; /* store head in pointer d */
 		head = head->next; /* points to next node */
+		free(d->str);
 		free(d);
 	}
 }
