@@ -32,15 +32,3 @@ list_t *add_node(list_t **head, const char *str)
 
 	return (new);
 }
-
-int main(void)
-{
-	list_t *head;
-
-	head = NULL;
-	add_node(&head, "Alexandro");
-	add_node(&head, "Asaia");
-	add_node(&head, "Augustin");
-	print_list(head);
-	return (0);
-}
