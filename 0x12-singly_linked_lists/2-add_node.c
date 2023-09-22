@@ -16,7 +16,11 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 
 	new->str = strdup(str); /* duplicate the string */
-
+	if (new->str == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
 	new->next = *head; /* set head as next pointer of new node */
 
 	*head = new; /* update head to point to new node */
