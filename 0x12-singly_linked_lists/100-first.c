@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
+ * print - uses printf to print
  * __attribute__((constructor)): attribute used
  * to specify that 'print' function should be
  * executed before the main function
- * print - uses printf to print
  */
 
 void __attribute__((constructor)) print(void)
