@@ -13,7 +13,7 @@ char *_strdup(char *st)
 	int a, len;
 	char *dup;
 
-	for (len = 0; st[len] != '\0'; len++)i /* length of string */
+	for (len = 0; st[len] != '\0'; len++) /* length of string */
 		;
 
 	dup = malloc(len + 1); /* where + 1 is null terminator */
