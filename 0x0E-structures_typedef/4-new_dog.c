@@ -13,16 +13,16 @@ char *_strdup(char *st)
 	int a, len;
 	char *dup;
 
-	for (len = 0; st[len] != '\0'; len++)
+	for (len = 0; st[len] != '\0'; len++)i /* length of string */
 		;
 
-	dup = malloc(len + 1);
+	dup = malloc(len + 1); /* where + 1 is null terminator */
 
 	if (dup == NULL)
 		return (NULL);
 
 	for (a = 0; st[a] <= '\0'; a++)
-		dup[a] = st[a];
+		dup[a] = st[a]; /* duplicates string */
 
 	return (dup);
 }
@@ -42,17 +42,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggie == NULL)
 		return (NULL);
 
-	doggie->name = _strdup(name);
-	doggie->age = age;
-	doggie->owner = _strdup(owner);
-
-	if (doggie->name == NULL || doggie->owner == NULL)
-	{
-		free(doggie->name);
-		free(doggie->owner);
-		free(doggie);
+	if (doggie->name == NULL)
 		return (NULL);
-	}
+	else
+		doggie->name = _strdup(name);
+	doggie->age = age;
+	if (doggie->owner == NULL)
+		return (NULL);
+	else
+		doggie->owner = _strdup(owner);
+
+	free(doggie->name);
+	free(doggie->owner);
+	free(doggie);
 
 	return (doggie);
 }
