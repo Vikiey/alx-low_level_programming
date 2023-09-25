@@ -3,31 +3,6 @@
 #include <stdlib.h>
 
 /**
- * *_strdup - a function that duplicates strings
- * @st: input string
- * Return: 0
- */
-
-char *_strdup(char *st)
-{
-	int a, len;
-	char *dup;
-
-	for (len = 0; st[len] != '\0'; len++) /* length of string */
-		;
-
-	dup = malloc(len + 1); /* where + 1 is null terminator */
-
-	if (dup == NULL)
-		return (NULL);
-
-	for (a = 0; st[a] <= '\0'; a++)
-		dup[a] = st[a]; /* duplicates string */
-
-	return (dup);
-}
-
-/**
  * *new_dog - a function that creates a new dog
  * @name: first struct member, type char pointer
  * @age: second struct   ""  , type float
@@ -37,24 +12,42 @@ char *_strdup(char *st)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int a, l_name, l_owner;
+
 	dog_t *doggie = malloc(sizeof(dog_t));
 
+	for (l_name = 0; name[l_name] != '\0'; l_name++)
+		;
+	for (l_owner = 0; owner[l_owner] != '\0'; l_owner++)
+		;
+
 	if (doggie == NULL)
+	{
 		return (NULL);
+	}
 
+	doggie->name = malloc(l_name + 1);
 	if (doggie->name == NULL)
+	{
+		free(doggie->name);
+		free(doggie);
 		return (NULL);
-	else
-		doggie->name = _strdup(name);
-	doggie->age = age;
-	if (doggie->owner == NULL)
-		return (NULL);
-	else
-		doggie->owner = _strdup(owner);
+	}
+	for (a = 0; a <= l_name; a++)
+		doggie->name[a] = name[a];
 
-	free(doggie->name);
-	free(doggie->owner);
-	free(doggie);
+	doggie->age = age;
+
+	doggie->owner = malloc(l_owner + 1);
+	if (doggie->owner == NULL)
+	{
+		free(doggie->owner);
+		free(doggie->name);
+		free(doggie);
+		return (NULL);
+	}
+	for (a = 0; a <= l_owner; a++)
+		doggie->owner[a] = owner[a];
 
 	return (doggie);
 }
