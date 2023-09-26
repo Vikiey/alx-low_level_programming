@@ -34,7 +34,10 @@ char *argstostr(int ac, char **av)
 	for (a = 0; a < ac; a++)
 	{
 		for (b = 0; av[a][b] != '\0'; b++)
-			cate[point++] = av[a][b];
+		{
+			if (point < len)
+				cate[point++] = av[a][b];
+		}
 		cate[point++] = '\n';
 	}
 	cate[point] = '\0';
