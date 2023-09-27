@@ -17,7 +17,7 @@ size_t free_listint_safe(listint_t **h)
 	while (*h != NULL)
 	{
 		new = (*h)->next; /* temporary stores next node */
-		if (new == NULL/* || new >= *h*/)
+		if (new == NULL || new >= *h)
 		{
 			size++;
 			free(*h); /* free current nide */
