@@ -30,5 +30,12 @@ size_t print_listint_safe(const listint_t *head)
 			exit(98);
 		}
 	}
+	while (first != NULL)
+	{
+		printf("[%p] %d\n", (void *)first, first->n);
+		first = first->next;
+		node++;
+	}
+
 	return (node);
 }
