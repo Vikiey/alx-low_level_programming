@@ -24,9 +24,12 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (*head == NULL) /* if list is empty, new node is head */
 		*head = new_n;
-	while (last->next != NULL) /* traverse list to last node */
-		last = last->next;
-	last->next = new_n; /* make new node the last node */
+	else
+	{
+		while (last->next != NULL) /* traverse list to last node */
+			last = last->next;
+		last->next = new_n; /* make new node the last node */
+	}
 
 	return (new_n);
 }
