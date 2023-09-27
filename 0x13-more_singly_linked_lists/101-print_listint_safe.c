@@ -23,13 +23,13 @@ size_t print_listint_safe(const listint_t *head)
 		first = first->next;
 		second = second->next->next;
 		node++;
-		
+
 		if (first == second)
 		{
 			printf("-> [%p] %d\n", (void *)first, first->n);
 			exit(98);
 		}
+		head = head->next;
 	}
-	head = NULL;
 	return (node);
 }
