@@ -37,6 +37,7 @@ size_t print_listint_safe(const listint_t *head)
 		first = first->next;
 		node++;
 	}
+	head = NULL;
 
 	return (node);
 }
