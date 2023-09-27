@@ -18,16 +18,17 @@ listint_t *find_listint_loop(listint_t *head)
 	{
 		lazy = lazy->next; /* lazy takes a step */
 		quick = quick->next->next; /* quick, 2 steps */
-	}
-	if (quick == lazy)
-	{
-		lazy = head;
-		while (lazy != quick)
+
+		if (quick == lazy)
 		{
-			lazy = lazy->next;
-			quick = quick->next;
+			lazy = head;
+			while (lazy != quick)
+			{
+				lazy = lazy->next;
+				quick = quick->next;
+			}
+			return (quick);
 		}
-		return (quick);
 	}
 	return (NULL);
 }
