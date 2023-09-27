@@ -8,22 +8,27 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *temp, *new;
+	listint_t *new;
 
 	size_t size = 0;
-
-	temp = *h;
 
 	if (*h == NULL)
 		return (0);
 	while (*h != NULL)
 	{
-		new = temp->next;
-		free(temp);
-		temp = new;
+		new = (*h)->next; /* temporary stores next node */
+		if (new == NULL/* || new >= *h*/)
+		{
+			size++;
+			free(*h); /* free current nide */
+			*h = NULL; /* indicates a free list*/
+			break;
+		}
+
 		size++;
+		free(*h);
+		*h = new; /* set pointer to next node in list */
 	}
-	*h = NULL;
 
 	return (size);
 }
