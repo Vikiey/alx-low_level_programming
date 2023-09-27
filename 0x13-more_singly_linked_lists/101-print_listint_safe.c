@@ -17,18 +17,20 @@ size_t print_listint_safe(const listint_t *head)
 	if (head == NULL)
 		exit(98);
 
-	while (first != NULL && second != NULL && second->next != NULL)
+	while (first != NULL)
 	{
 		printf("[%p] %d\n", (void *)first, first->n);
 		first = first->next;
-		second = second->next->next;
-
 		node++;
 
-		if (first == second)
+		if (second != NULL && second->next != NULL)
 		{
-			printf("-> [%p] %d\n", (void *)first, first->n);
-			exit(98);
+			second = second->next->next;
+			if (first == second)
+			{
+				printf("-> [%p] %d\n", (void *)first, first->n);
+				exit(98);
+			}
 		}
 	}
 	return (node);
