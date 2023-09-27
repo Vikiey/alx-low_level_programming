@@ -14,12 +14,12 @@ listint_t *find_listint_loop(listint_t *head)
 	if (head == NULL)
 		return (NULL);
 
-	while (quick != NULL && quick->next != NULL)
+	while (lazy != NULL && quick != NULL && quick->next != NULL)
 	{
 		lazy = lazy->next; /* lazy takes a step */
 		quick = quick->next->next; /* quick, 2 steps */
 	}
-	if (lazy == quick)
+	if (quick == lazy)
 	{
 		lazy = head;
 		while (lazy != quick)
@@ -27,7 +27,7 @@ listint_t *find_listint_loop(listint_t *head)
 			lazy = lazy->next;
 			quick = quick->next;
 		}
-		return (lazy);
+		return (quick);
 	}
 	return (NULL);
 }
