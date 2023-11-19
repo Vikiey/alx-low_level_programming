@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x, y, prod;
+	int a, y, prod;
 
 	if (argc != 3)
 	{
@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	}
 
 	/* convert the arguments to integers */
-	x = atoi(argv[1]);
+	a = atoi(argv[1]);
 	y = atoi(argv[2]);
 
-	prod = x * y;
+	prod = a * y;
 	printf("%d\n", prod);
 
-	return(0);
+	return (0);
 }
