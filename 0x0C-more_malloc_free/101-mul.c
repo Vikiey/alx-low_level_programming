@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -10,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x, y, mul;
+	int num1, num2, mul;
 
 	if (argc != 3)
 	{
@@ -18,9 +19,15 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	mul = x * y;
+	if (num1 <= 0 || num2 <= 0)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	mul = num1 * num2;
 
 	printf("%d\n", mul);
 
