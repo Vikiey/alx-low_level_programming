@@ -9,7 +9,7 @@
  * Return: 0
  */
 
-int main(int argc, char *wrgv[])
+int main(int argc, char *argv[])
 {
 	int cents, x;
 	int coins[] = {25, 10, 5, 2, 1};

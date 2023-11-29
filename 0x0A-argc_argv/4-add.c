@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positive numbers
@@ -10,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int a;
+	int sum = 0;
 
 	if (argc == 1)
 		printf("0");
