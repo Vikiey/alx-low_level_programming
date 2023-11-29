@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (num1 <= 0 || num2 <= 0)
+	if (argv[num1][num2] <= 0 || argv[num1][num2] <= 0)
 	{
 		printf("Error\n");
 		exit(98);
