@@ -19,10 +19,16 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (argv[num1][num2] <= 0 || argv[num1][num2] <= 0)
+	for (num1 = 1; num1 < argc; num1++)
 	{
-		printf("Error\n");
-		exit(98);
+		for (num2 = 0; argv[num1][num2] != '\0'; num2++)
+		{
+			if (argv[num1][num2] < 0 || argv[num1][num2] > 9)
+			{
+			printf("Error\n");
+			exit(98);
+			}
+		}
 	}
 
 	num1 = atoi(argv[1]);
