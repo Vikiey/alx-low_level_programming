@@ -20,12 +20,16 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	while (ops[i].op)
-	/* iterates through the operators until a
-	 * matching operator is found or end of array */
+	/**
+	 * iterates through the operators until a
+	 * matching operator is found or end of array
+	 */
 	{
 		if (ops[i].op[0] == s[0] && s[1] == '\0')
-		/* checks if the current operator matches the operator
-		 * provided and that the operator is a single char*/
+		/**
+		 * checks if the current operator matches the operator
+		 * provided and that the operator is a single char
+		 */
 			return (ops[i].f); /* returns the associated function pointer */
 		i++;
 	}
