@@ -21,7 +21,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (separator == NULL)
 			printf("%d", va_arg(ap, int));
 		else if (x < (n - 1))
+		{
 			printf("%d%s", va_arg(ap, int), separator);
+			break;
+		}
 	}
 
 	printf("\n");
