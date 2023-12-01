@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(ap, n);
 	str = va_arg(ap, char *);
 
-	if (separator == NULL)
+	if (separator != NULL)
 		printf("%s", str);
 	for (x = 0; x < n; x++)
 	{
