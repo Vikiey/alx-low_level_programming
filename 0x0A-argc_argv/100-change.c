@@ -11,8 +11,11 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, x;
+	int x;
+	int cents = atoi(argv[1]);
 	int coins[] = {25, 10, 5, 2, 1};
+	int c = 0;
+	int num = sizeof(coins) / sizeof(coins[0]);
 
 	if (argc != 2)
 	{
@@ -26,4 +29,16 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
+
+	for (x = 0; x < num; x++)
+	{
+		while (cents >= coins[x])
+		{
+			cents -= coins[x];
+			c++;
+		}
+	}
+	printf("%d\n", c);
+
+	return (0);
 }
