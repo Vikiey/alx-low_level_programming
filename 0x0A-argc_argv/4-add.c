@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a;
+	int a, b;
 	int sum = 0;
 
 	if (argc == 1)
@@ -18,10 +18,13 @@ int main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		if (a < 0 || a > 9)
-		{
+		for (b = 0; argv[a][b] != '\0'; b++)
+		{/* checks for digits */
+			if (!(argv[a][b] >=  0 && argv[a][b] <= 9))
+			{
 			printf("Error\n");
 			return (1);
+			}
 		}
 	}
 
