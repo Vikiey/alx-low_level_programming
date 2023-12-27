@@ -11,8 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int x;
-	int cents = atoi(argv[1]);
+	int x, cents;
 	int coins[] = {25, 10, 5, 2, 1};
 	int c = 0;
 	int num = sizeof(coins) / sizeof(coins[0]);
@@ -28,6 +27,7 @@ int main(int argc, char *argv[])
 	if (cents < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 
 	for (x = 0; x < num; x++)
