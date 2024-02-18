@@ -2,6 +2,17 @@
 #include <stdlib.h>
 
 /**
+ * _isdigit - checks if a character is a digit
+ * @c: character to check
+ * Return: digit
+ */
+
+int _isdigit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+/**
  * main - adds positive numbers
  * @argc: argument count
  * @argv: argument vector
@@ -19,8 +30,8 @@ int main(int argc, char *argv[])
 	for (a = 1; a < argc; a++)
 	{
 		for (b = 0; argv[a][b] != '\0'; b++)
-		{/* checks for digits */
-			if (!(argv[a][b] >=  0 && argv[a][b] <= 9))
+		{
+			if (!_isdigit(argv[a][b]))
 			{
 			printf("Error\n");
 			return (1);
